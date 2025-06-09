@@ -345,6 +345,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
   .about-us-section {
   padding: 5rem 0;
   position: relative;
+  overflow-x: hidden;
 }
 
 .about-us-section .about-container {
