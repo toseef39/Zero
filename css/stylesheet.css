@@ -349,7 +349,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
 
 .about-us-section .about-container {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 4rem;
