@@ -208,7 +208,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
   }
   
   /* RESPONSIVE */
-  @media (max-width: 992px) {
+  /* @media (max-width: 992px) {
     .hero-container {
       flex-direction: column;
       text-align: center;
@@ -225,7 +225,64 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
     .coin {
       width: 40px;
     }
+  } */
+   @media (max-width: 992px) {
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem 1rem 1rem;
+    gap: 1.5rem;
   }
+
+  .crypto-stats {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .header-nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+    display: block;
+  }
+
+  .header-nav-bar .logo {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .crypto-stats {
+    padding: 15px;
+  }
+
+  .stat p {
+    font-size: 13px;
+  }
+
+  .stat span {
+    font-size: 16px;
+  }
+
+  .header-nav-bar .nav-links a {
+    font-size: 16px;
+  }
+}
+
 
 
 
@@ -241,7 +298,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
   }
   
 /* about us section */
-  .about-us-section{padding: 5rem 0; position: relative;}
+  /* .about-us-section{padding: 5rem 0; position: relative;}
 
   .about-us-section .about-container{display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 4rem;}
   .about-us-section .about-left{flex: 1; position: relative; display: flex; justify-content: center;}
@@ -283,7 +340,217 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
     .about-us-section .about-right {
       order: 1;
     }
+  } */
+
+  .about-us-section {
+  padding: 5rem 0;
+  position: relative;
+}
+
+.about-us-section .about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.about-us-section .about-left {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.about-us-section .phone-wrap {
+  position: relative;
+  width: 260px;
+  max-width: 100%;
+}
+
+.about-us-section .phone-img {
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 15px;
+  right: -18px;
+}
+
+.about-us-section .coin {
+  position: absolute;
+  animation: floatUpDown 4s ease-in-out infinite;
+  z-index: 3;
+}
+
+.about-us-section .coin-top {
+  top: -19%;
+  left: -39%;
+  animation-delay: 0s;
+  height: 165px;
+  width: 165px;
+}
+
+.about-us-section .coin-bottom {
+  bottom: -32%;
+  right: -80%;
+  animation-delay: 2s;
+  height: 300px;
+  width: 300px;
+  z-index: 9999;
+}
+
+@keyframes floatUpDown {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.about-us-section .about-right {
+  flex: 1;
+  max-width: 540px;
+}
+
+.about-us-section .section-label {
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #CDCDCD;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.about-us-section .about-title {
+  font-size: 48px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 140%;
+  color: #FFFFFF;
+}
+
+.about-us-section .about-text {
+  color: #DADADA;
+  font-size: 18px;
+  margin-bottom: 80px;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.45px;
+}
+
+.about-us-section .about-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 29px;
+}
+
+.about-us-section .accordion-item {
+  border-bottom: 1px solid;
+  border-image-source: linear-gradient(90deg, rgba(47, 70, 106, 0.1) -2.94%, #2F466A 49.17%, rgba(47, 70, 106, 0.1) 102.37%);
+  border-image-slice: 1;
+  border-width: 0 0 1px 0;
+  border-style: solid;
+}
+
+.about-us-section .accordion-toggle {
+  background: none;
+  color: #fff;
+  text-align: left;
+  padding: 0 10px 29px 0;
+  width: 100%;
+  border: none;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: 600;
+  line-height: 140%;
+}
+
+.about-us-section .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.about-us-section .accordion-content p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.about-us-section .accordion-item.active .accordion-content {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.about-us-section .accordion-toggle .arrow {
+  transition: transform 0.3s ease;
+}
+
+.about-us-section .accordion-item.active .accordion-toggle .arrow {
+  transform: rotate(90deg);
+}
+@media (max-width: 992px) {
+  .about-us-section .about-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .about-us-section .about-left,
+  .about-us-section .about-right {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .about-us-section .about-right {
+    order: 1;
+  }
+
+  .about-us-section .about-left {
+    order: 2;
+  }
+
+  .about-us-section .about-title {
+    font-size: 32px;
+  }
+
+  .about-us-section .about-text {
+    font-size: 16px;
+    margin-bottom: 40px;
+    padding: 0 1rem;
+  }
+
+  .about-us-section .coin-top {
+    top: -10%;
+    left: -25%;
+    height: 90px;
+    width: 90px;
+  }
+
+  .about-us-section .coin-bottom {
+    bottom: -20%;
+    right: -30%;
+    height: 150px;
+    width: 150px;
+  }
+
+  .about-us-section .phone-wrap {
+    width: 180px;
+  }
+
+  .about-us-section .phone-img {
+    top: 10px;
+    right: 0;
+    width: 100%;
+  }
+}
+
   /* RESPONSIVE */
  
   
@@ -675,6 +942,126 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
       font-size: 1.5rem;
     }
   }
+
+  @media (max-width: 992px) {
+  .roadmap-card-main {
+    padding: 60px 30px;
+  }
+
+  .card-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .roadmap-card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 120%;
+  }
+
+  .tier-number {
+    font-size: 14px;
+    padding: 4px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .roadmap-card h3 {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 8px;
+  }
+
+  .roadmap-card p {
+    font-size: 15px;
+    line-height: 20px;
+    margin-bottom: 18px;
+  }
+
+  .brand-logos {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .brand-logos .brandLogo {
+    height: 28px;
+    width: 28px;
+  }
+
+  .status-label.btn {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+
+  .status-label.live,
+  .status-label.progress,
+  .status-label.upcoming {
+    font-size: 16px;
+  }
+
+  .Opacity-text {
+    font-size: 120px !important;
+    text-align: center;
+    line-height: 100%;
+  }
+
+  .yellow-shadmap img,
+  .yellow-shadmap2 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (max-width: 576px) {
+  .roadmap-card-main {
+    padding: 40px 20px;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .Opacity-text {
+    font-size: 80px !important;
+  }
+
+  .tier-number {
+    font-size: 13px;
+    padding: 3px 8px;
+  }
+
+  .roadmap-card h3 {
+    font-size: 18px;
+  }
+
+  .roadmap-card p {
+    font-size: 14px;
+  }
+
+  .brand-logos .brandLogo {
+    height: 24px;
+    width: 24px;
+  }
+
+  .status-label.btn {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
+
+  .status-label.live,
+  .status-label.progress,
+  .status-label.upcoming {
+    font-size: 15px;
+  }
+}
 
   .documents-section {
     padding: 0 20px;
@@ -1154,6 +1541,166 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
         width: 250px; /* Further adjust for very small screens */
     }
 }
+
+/* Base Styles */
+.tokenomics-section-main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tokenomics-section-main__header-left-aligned {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.tokenomics-section-main__title-left-aligned {
+  font-size: 2.5em;
+  color: var(--text-color);
+  margin: 0;
+  text-align: left;
+}
+
+.tokenomics-section-main__content-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+}
+
+.tokenomics-section-main__text-content-left {
+  flex: 1;
+  min-width: 320px;
+  padding-right: 30px;
+  text-align: left;
+}
+
+.tokenomics-section-main__text-content-left p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: var(--label-color);
+  margin-bottom: 20px;
+}
+
+.tokenomics-section-main__text-content-left ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tokenomics-section-main__text-content-left li {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  color: var(--text-color);
+  position: relative;
+  padding-left: 20px;
+}
+
+.tokenomics-section-main__text-content-left li::before {
+  content: '•';
+  color: #f0ec36;
+  font-size: 1.5em;
+  position: absolute;
+  left: 0;
+  top: -3px;
+}
+
+.tokenomics-section-main__percentage {
+  font-weight: bold;
+  color: #f0ec36;
+}
+
+.tokenomics-section-main__chart-image-container {
+  flex-shrink: 0;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tokenomics-section-main__chart-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+}
+
+/* Mobile + Tablet - Responsive Adjustments */
+@media (max-width: 992px) {
+  .tokenomics-section-main {
+    align-items: center;
+    padding: 30px 20px;
+  }
+
+  .tokenomics-section-main__header-left-aligned {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .tokenomics-section-main__title-left-aligned {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .tokenomics-section-main__content-layout {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .tokenomics-section-main__text-content-left {
+    width: 100%;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .tokenomics-section-main__text-content-left ul {
+    text-align: left;
+    padding-left: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .tokenomics-section-main__chart-image-container {
+    width: 320px;
+  }
+}
+
+@media (max-width: 600px) {
+  .tokenomics-section-main {
+    padding: 20px 15px;
+  }
+
+  .tokenomics-section-main__title-left-aligned {
+    font-size: 1.6em;
+  }
+
+  .tokenomics-section-main__text-content-left p,
+  .tokenomics-section-main__text-content-left li {
+    font-size: 1em;
+  }
+
+  .tokenomics-section-main__chart-image-container {
+    width: 250px;
+  }
+}
+@media (max-width: 768px) {
+  .tokenomics-section-main__chart-image-container img[style*="position: absolute"] {
+    display: none;
+  }
+}
+
 .koin-road-map-wrapper{
   padding: 2px;
   border-radius: 36px;
