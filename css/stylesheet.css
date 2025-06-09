@@ -274,6 +274,12 @@ html, body {
 }
 
 @media (max-width: 576px) {
+  .top-bar {
+    display: flex;
+    align-items: center;
+    padding: 2rem 1rem 1rem;
+    gap: 1.5rem;
+  }
   .crypto-stats {
     padding: 15px;
   }
