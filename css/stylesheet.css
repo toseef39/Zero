@@ -343,7 +343,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
   } */
 
   .about-us-section {
-  padding: 5rem 0;
+  padding: 4rem 0;
   position: relative;
 }
 
@@ -355,12 +355,12 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
   gap: 4rem;
 }
 
-.about-us-section .about-left {
+/* .about-us-section .about-left {
   flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
-}
+} */
 
 .about-us-section .phone-wrap {
   position: relative;
@@ -495,6 +495,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
 .about-us-section .accordion-item.active .accordion-toggle .arrow {
   transform: rotate(90deg);
 }
+
 @media (max-width: 992px) {
   .about-us-section .about-container {
     flex-direction: column;
@@ -502,19 +503,19 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
     gap: 3rem;
   }
 
-  .about-us-section .about-left,
+  /* .about-us-section .about-left,
   .about-us-section .about-right {
     width: 100%;
     max-width: 100%;
-  }
+  } */
 
   .about-us-section .about-right {
     order: 1;
   }
 
-  .about-us-section .about-left {
+  /* .about-us-section .about-left {
     order: 2;
-  }
+  } */
 
   .about-us-section .about-title {
     font-size: 32px;
@@ -2137,6 +2138,202 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
         height: 18px;
     }
 }
+
+/* Adjust main section padding and spacing for all screen sizes */
+.download-section-main {
+  width: 100%;
+  background-color: var(--dark-blue);
+  padding: 200px 20px 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+/* Center and scale down text and icons responsively */
+.download-section-main__title {
+  font-size: 2.5em;
+  font-weight: 800;
+  background: linear-gradient(90deg, #FFFFFF 0%, #999999 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  line-height: 1.2;
+  z-index: 2;
+  position: relative;
+}
+
+.download-section-main__description {
+  font-size: 1.1em;
+  color: rgba(197, 209, 227, 1);
+  margin: 0 auto 40px;
+  max-width: 500px;
+  z-index: 2;
+  position: relative;
+}
+
+/* Responsive download buttons */
+.download-section-main__buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.download-button {
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+  width: 90%;
+}
+
+.download-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Floating animated icons */
+.download-section-main__floating-icon {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  animation: float-icon 3s ease-in-out infinite;
+  z-index: 1;
+}
+
+.download-section-main__floating-icon--left {
+  left: 8%;
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+.download-section-main__floating-icon--right {
+  right: 8%;
+  top: 80%;
+  transform: translateY(-50%);
+  animation-delay: 1.5s;
+}
+
+@keyframes float-icon {
+  0%, 100% { transform: translateY(-50%) translateY(0); }
+  50% { transform: translateY(-50%) translateY(-15px); }
+}
+
+/* Scroll-to-top button styling */
+.sectiontop-border-circle {
+  position: absolute;
+  top: 30%;
+  right: 30px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(122, 151, 187, 1);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  z-index: 3;
+}
+
+.download-section-main__scroll-to-top {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid var(--label-color);
+  background: linear-gradient(180deg, rgba(18, 99, 126, 0.58), rgba(4, 24, 45, 0.58));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.download-section-main__scroll-to-top:hover {
+  background-color: var(--highlight-yellow);
+  border-color: var(--highlight-yellow);
+  box-shadow: 0 0 15px rgba(253, 219, 58, 0.7);
+}
+
+.download-section-main__scroll-to-top svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+  color: var(--text-color);
+  transition: transform 0.3s ease;
+}
+
+.download-section-main__scroll-to-top:hover svg {
+  transform: translateY(-3px);
+  color: var(--dark-blue);
+}
+@media (max-width: 768px) {
+  .download-section-main {
+    padding: 120px 15px 60px;
+  }
+
+  .download-section-main__title {
+    font-size: 2em;
+  }
+
+  .download-section-main__description {
+    font-size: 1em;
+    max-width: 400px;
+  }
+
+  .download-section-main__floating-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .download-section-main__scroll-to-top {
+    width: 45px;
+    height: 45px;
+  }
+
+  .download-section-main__scroll-to-top svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .sectiontop-border-circle {
+    right: 20px;
+    top: 25%;
+  }
+}
+
+@media (max-width: 480px) {
+  .download-section-main__title {
+    font-size: 1.7em;
+  }
+
+  .download-section-main__description {
+    font-size: 0.95em;
+  }
+
+  .download-section-main__floating-icon {
+    display: none; /* Hide on very small screens if overlapping */
+  }
+
+  .download-button {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .sectiontop-border-circle {
+    right: 15px;
+    top: 20%;
+  }
+
+  .download-section-main__scroll-to-top {
+    width: 40px;
+    height: 40px;
+  }
+
+  .download-section-main__scroll-to-top svg {
+    width: 18px;
+    height: 18px;
+  }
+}
+
 /* Footer Specific Variables (adjust if needed) */
 :root {
   --footer-bg-color: #1a1e2a; /* Main footer background, slightly different from other darks */
