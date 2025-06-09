@@ -54,6 +54,7 @@ html, body {
   .top-bar {
     display: flex;
     gap: 30px;
+    margin-left: auto;
     align-items: center;
     padding: 51px 1rem 1rem;
     flex-wrap: wrap;
