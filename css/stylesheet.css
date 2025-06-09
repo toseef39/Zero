@@ -159,6 +159,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
     border-radius: 50%;
     position: relative;
   }
+ 
   .logo-center {
     position: absolute;
     top: 50%;
@@ -235,7 +236,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
   }
 
   .crypto-stats {
-    flex-direction: column;
+    flex-direction: row;
     padding: 20px;
     gap: 20px;
     width: 100%;
@@ -343,17 +344,21 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
   } */
 
   .about-us-section {
-  padding: 4rem 0;
+  margin-top: 120px; /* Reduced from 250px */
+  position: relative;
+}
+  .about-us-section {
+  padding: 5rem 0;
   position: relative;
   overflow-x: hidden;
 }
 
 .about-us-section .about-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  gap: 4rem;
+  gap: 3rem;
 }
 
 /* .about-us-section .about-left {
@@ -631,10 +636,12 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
   
   .launch-section .launch-section__stores {
     display: flex;
+    /* flex-wrap: wrap; */
     gap: 20px;
   }
   
   .launch-section .store-btn {
+    
     background: #0b2349;
     border: 1px solid #00ccff;
     color: white;
@@ -1021,6 +1028,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
     object-fit: contain;
   }
 }
+
 
 @media (max-width: 576px) {
   .roadmap-card-main {
@@ -1412,7 +1420,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
 .tokenomics-section-main__content-layout {
     display: flex;
     flex-wrap: wrap; /* Allows content to wrap on smaller screens */
-    justify-content: space-between; /* Pushes content and image to edges */
+    justify-content: space-around; /* Pushes content and image to edges */
     align-items: flex-start; /* Align items to the top */
     width: 100%;
     position: relative;
@@ -1470,7 +1478,7 @@ h1,h2,h3,h4,h5,p,span,body{margin: 0; padding: 0;}
 }
 
 .tokenomics-section-main__chart-image {
-    max-width: 100%; /* Ensure image scales down if container is smaller */
+    max-width: 200%; /* Ensure image scales down if container is smaller */
     height: auto;
     display: block; /* Remove extra space below image */
 }
@@ -3056,3 +3064,73 @@ img {
     height: auto;
   }
 }
+
+
+
+
+/* T downloadpage */
+@media screen and (max-width: 768px) {
+  .zerokoin-text {
+    height: auto !important;
+    width: 90% !important;  /* thoda padding ke liye */
+    margin: 0 auto;         /* center align */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .launch-section__heading {
+    font-size: 1.8rem !important;
+  }
+
+  .features-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .download-button {
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .why-choose .choose-content {
+    flex-direction: column;
+  }
+
+  .card-content {
+    border: none !important;
+    padding: 15px 0;
+  }
+  
+}
+
+/* zero-koin-choos */
+@media screen and (max-width: 768px) {
+  .zero-koin-choose {
+    padding: 20px 15px !important;
+  }
+
+  .choose-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 30px !important;
+  }
+
+  .card-content {
+    border: none !important;
+    text-align: center;
+  }
+
+  .card-content .img-holder {
+    margin: 0 auto 10px auto;
+  }
+}
+
+
+
+/* T aboutus */
+
+
+
+
